@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <script src="{% static 'js/main.js' %}">
+    </script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hello</title>
+
+</head>
+<body>
+    <h1>THIS IS STATIC css</h1>
+<b>AHHHHHHHHHHHHHHHHHHHHHHHHh</b><br>
+<strong>My name is {{name}}</strong><br> <!-- double brackets gives value of var-->
+<strong>My Age is {{age}}</strong><br>
+<strong>List:  {{list}}</strong><br>
+{% if x > y %}
+<p>{{x}} is greater </p>
+{% else %}
+<p>{{y}} is greater</p>
+{% endif %}
+
+<p>{{res}} is greater from py</p><br>
+<br>
+{% for i in list %}
+    {{i}}<br>
+{% endfor %}   
+<table style="width:100%", border="1 px solid black">
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Category</td>
+        <td>Price</td>
+    </tr>
+{% for j in products %}
+    <tr>
+        <td>{{j.id}}</td>
+        <td>{{j.name}}</td>
+        <td>{{j.cat}}</td>
+        <td>{{j.price}}</td>
+    </tr>
+{% endfor %}  
+</table>
+<button onclick="greet()" >CLICK ME</button>
+</body> 
+</html>
